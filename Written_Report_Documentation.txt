@@ -1,0 +1,49 @@
+# Kickstarting with Excel
+
+## Overview of Project
+
+### Purpose: The Purpose of this analysis is for me to learn the excel computer program.  The exercise really helped me revisit what I thought I knew about excel and what 
+I really know (which was not too much).  The project allowed me to review Louise’s fundraising goal and different campaigns and how they fared in relation to their launch 
+dates and their funding goals. Using any dataset I could visualize outcomes with excel.
+   
+
+## Analysis and Challenges:  I performed my analysis using excel computer program.  Using what I call the "data sheet", has all of Louise's fundraising goals and different campaigns, I created
+ a pivot table and labeled it "Theater Outcomes by Launch date".  My column labels where "successful, failed and cancelled".  However, I also had "live" column has a label.  This was 
+my first challege as I could not figure out how to omit "live" from the pivot table.  I finally figured out how to do it but I was deep into the project and figured it was a good challenge
+talking point.  All I had to do on the onset was filter it out from the data column labeled "outcomes".  The second challenge was seperated the month from Date created column.  I followed 
+the directions in the homework to seperate the Year but the month needed to be seperated to match the homework solution.  I had to google and learn a formula to seperate the month.  I used
+=TEXT(S4055,"mmmm").  The text function changes the way a number is presented, in this case a date of 6/19/2016.  I selected the date created column and applied the function.  The "mmmm"displays 
+the month name like "June".  I later realized that I could have just entered "mmm"and that would have brought back a shorter name like "Jan" versus "January".  Well, I'm here to learn.
+
+The next exercise, "outcomes based on goals" was way more challenging for me.  The first example for Countifs function was pretty easy, it just returned a number less than or equal to a number
+I was looking for.  But to get the different ranges of lets say 1000 to 4999 was difficult.  I couldnt figure out a nested function or formula to subtract the ranges.  I created seperate columns
+in the worksheet and used the formula I learned in the homework which was =COUNTIFS(Data!D:D,"<=999",Data!F:F,"successful") and just subtracted one column from the other.  
+
+So for example, range of 1,000 but less then 4,999, I used the formula in seperate columns and subtracted them both to get results.  My formula read:
+=COUNTIFS(Data!D:D,"<=1000",Data!F:F,"Canceled")-=COUNTIFS(Data!D:D,"<=4999",Data!F:F,"canceled").  It worked out, Im sure I'll learn more in class (thats the point).
+
+Everything else worked out pretty easily.  To copy the formula manually from cell to cell was challenging.  I will figure out how to lock or freeze the formula so it pulls from the 
+same columns/worksheet everytime.  I tried to use the $ symbol as I read that holds the formula but I couldnt get it to work.
+
+
+## Results
+
+- What are two conclusions you can draw about the Outcomes based on Launch Date?
+
+1. Theater "successful campaigns took place from the months of April to June.
+2. Theater "failed" campaigns occurred more in the winter months (October).
+
+- What can you conclude about the Outcomes based on Goals?
+
+I can conclude that the formulas I entered are correct because my percentage for successful, failed and canceled totaled 100% when you add all the seperate percentages together.  
+Also, there where more successful campaigns then canceled or failed.
+
+- What are some limitations of this dataset?
+
+The limitations of the data set or concession sales.  Most theaters make most of their revenue from concessions.  The data set is limited and does not include that data.  Also, there is
+no data to determine what made campaigns successful versus failed.
+
+- What are some other possible tables and/or graphs that we could create?
+
+If the data set was available for concessions, expenses like payroll, you could do more comparisons to determine the "true" highest peak sales for what month.  From the data set, all the data
+is gross figures and doesnt account for expenses that could be masking true profits.
